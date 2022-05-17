@@ -517,3 +517,11 @@
     height: 52%;
   }
 }
+
+@media screen and (max-width: 525px) {
+  .js-anim {
+    transform: translate(0) rotate(0) !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+}
