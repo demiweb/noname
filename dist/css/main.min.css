@@ -34,7 +34,7 @@ img.lazyload, video.lazyload {
 
 .is-loaded {
   opacity: 0;
-  visibility: visible;
+  visibility: hidden;
   -webkit-animation: faddingImgAnim 0.5s ease;
           animation: faddingImgAnim 0.5s ease; }
 
