@@ -289,7 +289,9 @@ let openModalThx = [...document.querySelectorAll('.modal-window form .btn')];
 function openThanks() {
     if (openModalThx.length) {
         openModalThx.forEach((btn) => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 let clos = btn.closest('.modal-container');
                 clos.querySelector('.modal-close').click();
                 document.querySelector('.modal-window--thx').classList.add('visible');
