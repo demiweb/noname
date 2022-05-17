@@ -519,6 +519,13 @@
 }
 
 @media screen and (max-width: 525px) {
+  .big-step .big-word svg {
+    mix-blend-mode: initial;
+
+    path.line {
+      filter: initial;
+    }
+  }
   .js-anim {
     transform: translate(0) rotate(0) !important;
     filter: none !important;

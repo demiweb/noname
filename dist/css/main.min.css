@@ -3196,6 +3196,11 @@ form {
     height: 52%; } }
 
 @media screen and (max-width: 525px) {
+  .big-step .big-word svg {
+    mix-blend-mode: initial; }
+    .big-step .big-word svg path.line {
+      -webkit-filter: initial;
+              filter: initial; }
   .js-anim {
     -webkit-transform: translate(0) rotate(0) !important;
         -ms-transform: translate(0) rotate(0) !important;
