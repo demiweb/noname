@@ -386,7 +386,8 @@ input[type=number] {
   height: 100vh;
   padding-top: 170px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  overflow: hidden; }
   .hero .container {
     max-width: none;
     height: 100%; }
@@ -1735,6 +1736,23 @@ input[type=number] {
       width: auto;
       height: 100%; } }
 
+.logo svg .line {
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease; }
+
+.logo:hover svg .line {
+  -webkit-transform: rotate(10deg) translate(-2px, -9px) scale(1.1);
+      -ms-transform: rotate(10deg) translate(-2px, -9px) scale(1.1);
+          transform: rotate(10deg) translate(-2px, -9px) scale(1.1);
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease; }
+
 .header {
   width: 100%;
   background: #fff;
@@ -1762,7 +1780,7 @@ input[type=number] {
   .header .logo {
     width: auto;
     height: 60px; }
-    .header .logo a, .header .logo img {
+    .header .logo a, .header .logo img, .header .logo svg {
       width: auto;
       height: 100%; }
 
@@ -2159,7 +2177,7 @@ input[type=number] {
     padding-right: 6px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
-    .header .logo a, .header .logo img {
+    .header .logo a, .header .logo img, .header .logo svg {
       width: 100%;
       height: auto; }
   .header-bottom .right {
@@ -2290,7 +2308,7 @@ input[type=number] {
     padding-right: 6px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
-    .header .logo a, .header .logo img {
+    .header .logo a, .header .logo img, .header .logo svg {
       width: 100%;
       height: auto; }
   .soc-menu {
@@ -2354,7 +2372,7 @@ input[type=number] {
     width: 320px;
     height: auto;
     margin-right: calc(50% - 320px); }
-    .footer-top .logo a, .footer-top .logo img {
+    .footer-top .logo a, .footer-top .logo img, .footer-top .logo svg {
       width: 100%;
       height: auto; }
 
@@ -2710,9 +2728,7 @@ input[type=number] {
                 transform: translate(-50%, -50%) rotate(-45deg); }
 
 .modal-backplate {
-  background: rgba(58, 58, 58, 0.7);
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  background: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -2752,6 +2768,17 @@ input[type=number] {
   -o-transition: opacity 0.4s ease, transform 0.6s ease;
   transition: opacity 0.4s ease, transform 0.6s ease;
   transition: opacity 0.4s ease, transform 0.6s ease, -webkit-transform 0.6s ease; }
+  .modal-container .btn.modal-close {
+    position: static;
+    margin-top: 30px;
+    width: auto;
+    height: auto;
+    padding: 5px 45px; }
+    .modal-container .btn.modal-close:hover {
+      border: 2px solid #000; }
+  .modal-container .logo + .dot {
+    margin-top: 30px;
+    margin-bottom: 5px; }
   .modal-container::before, .modal-container::after {
     width: 40%;
     height: 35%;
@@ -2817,7 +2844,8 @@ form {
     width: 100%;
     resize: none;
     padding: 9px 12px;
-    border: 2px solid #000;
+    border: none;
+    border-bottom: 2px solid #000;
     font-size: 14px;
     line-height: 1.1;
     color: #000; }

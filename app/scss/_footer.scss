@@ -15,7 +15,7 @@
     height: auto;
     margin-right: calc(50% - 320px);
 
-    a, img {
+    a, img, svg {
       width: 100%;
       height: auto;
     }
@@ -385,8 +385,8 @@
 }
 
 .modal-backplate {
-  background: rgba(58, 58, 58, 0.7);
-  backdrop-filter: blur(15px);
+  background: #fff;
+  //backdrop-filter: blur(15px);
   position: absolute;
   top: 0;
   left: 0;
@@ -412,6 +412,22 @@
   align-items: flex-start;
   justify-content: flex-start;
   transition: opacity 0.4s ease, transform 0.6s ease;
+
+  .btn.modal-close {
+    position: static;
+    margin-top: 30px;
+    width: auto;
+    height: auto;
+    padding: 5px 45px;
+
+    &:hover {
+      border: 2px solid #000;
+    }
+  }
+  .logo + .dot {
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
 
   &::before, &::after {
     width: 40%;
@@ -474,7 +490,8 @@ form {
     width: 100%;
     resize: none;
     padding: 9px 12px;
-    border: 2px solid #000;
+    border: none;
+    border-bottom: 2px solid #000;
     font-size: 14px;
     line-height: 1.1;
     color: #000;

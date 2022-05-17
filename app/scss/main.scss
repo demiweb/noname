@@ -357,6 +357,7 @@ input[type=number] {
   height: 100vh;
   padding-top: 170px;
   box-sizing: border-box;
+  overflow: hidden;
 
   .container {
     max-width: none;
@@ -1816,6 +1817,25 @@ input[type=number] {
     img {
       width: auto;
       height: 100%;
+    }
+  }
+}
+
+.logo {
+  svg {
+    .line {
+
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  }
+
+  &:hover {
+    svg {
+      .line {
+        transform: rotate(10deg) translate(-2px, -9px) scale(1.1);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+      }
     }
   }
 }
