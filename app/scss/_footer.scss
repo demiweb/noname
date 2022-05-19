@@ -13,7 +13,9 @@
   .logo {
     width: 320px;
     height: auto;
-    margin-right: calc(50% - 320px);
+    margin-right: calc(45% - 320px);
+    position: sticky;
+    top: 120px;
 
     a, img, svg {
       width: 100%;
@@ -38,6 +40,15 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: lowercase;
+        color: #000000;
       }
 
       a {
@@ -70,6 +81,14 @@
       }
     }
   }
+
+
+}
+
+
+.foot-cont {
+  width: 100%;
+  position: relative;
 
   .drop-lines {
     bottom: 0;
@@ -115,11 +134,6 @@
   }
 }
 
-.foot-cont {
-  width: 100%;
-  position: relative;
-}
-
 .footer-bottom {
   width: 100%;
   margin-top: 60px;
@@ -154,6 +168,101 @@
 
   span {
     margin-left: auto;
+  }
+}
+
+.footer-right {
+  width: 55%;
+}
+
+.company-info {
+  width: 100%;
+  position: relative;
+  padding-left: 65px;
+  padding-bottom: 55px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .dot {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+    margin-bottom: 55px;
+    display: inline-block;
+    position: relative;
+    padding-right: 30px;
+    &::before {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      display: inline-block;
+      content: '';
+      background: url("../img/arr-r.svg") no-repeat center / 100%;
+      transform: translate(0, -50%) rotateX(180deg);
+      filter: invert(50%) sepia(5%) saturate(309%) hue-rotate(226deg) brightness(116%) contrast(80%);
+
+    }
+  }
+
+  .drop-lines {
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .start {
+      bottom: -2px;
+      right: 100%;
+      width: 2px;
+      height: 0;
+    }
+
+    .big {
+      left: 0;
+      top: 0;
+      height: 2px;
+      width: 0;
+    }
+
+    .center {
+      left: 30%;
+      bottom: 0;
+      width: 2px;
+      height: 0;
+    }
+
+    .end {
+      left: 100%;
+      top: 0;
+      width: 2px;
+      height: 0;
+    }
+
+
+  }
+}
+
+.footer.anim-start {
+  .company-info {
+    .drop-lines {
+      .start, .end, .center {
+        height: 60px;
+      }
+
+      .big {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -203,13 +312,27 @@
     width: 180px;
     margin-right: calc(40% - 180px);
   }
+  .footer-right {
+    width: 60%;
+  }
+  .company-info {
+    .dot {
+      font-size: 32px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    padding-left: 40px;
+    padding-bottom: 35px;
+    margin-bottom: 40px;
+  }
   .footer-bottom a, .footer-bottom p, .footer-bottom span {
     font-size: 12px;
   }
   .footer-bottom p {
     width: 250px;
   }
-  .footer .soc-menu li a {
+  .footer .soc-menu li a, .footer .soc-menu li p {
     font-size: 18px;
     line-height: 1.1;
   }
@@ -219,11 +342,23 @@
   .footer {
     padding: 70px 0 35px;
   }
-  .footer .drop-lines .center {
+  .foot-cont .drop-lines .center {
     left: 250px;
   }
 }
+@media screen and (max-width: 730px) {
+  .company-info {
+    .dot {
+      font-size: 26px;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
 
+    padding-left: 26px;
+    padding-bottom: 26px;
+    margin-bottom: 26px;
+  }
+}
 @media screen and (max-width: 650px) {
   .footer-bottom {
     position: relative;
@@ -234,7 +369,7 @@
       top: calc(100% + 4px);
     }
   }
-  .footer .drop-lines .center {
+  .foot-cont .drop-lines .center {
     left: 50%;
   }
   .footer-bottom p {
@@ -246,6 +381,10 @@
 }
 
 @media screen and (max-width: 525px) {
+  .footer .logo {
+    position: static;
+    margin-left: 26px;
+  }
   .footer {
     padding: 40px 0 65px;
   }
@@ -269,17 +408,31 @@
       padding-left: 0;
     }
   }
+  .company-info {
+    .dot {
+      font-size: 22px;
+      line-height: 1.1;
+      &::before {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .footer .soc-menu li a::after {
+    width: 13px;
+    height: 13px;
+  }
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
 
     .logo {
-      width: 170px;
+      width: 210px;
       margin-right: 0;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
     }
   }
-  .footer .drop-lines .center {
+  .foot-cont .drop-lines .center {
     left: auto;
     right: 100%;
   }
@@ -424,6 +577,7 @@
       border: 2px solid #000;
     }
   }
+
   .logo + .dot {
     margin-top: 30px;
     margin-bottom: 5px;
