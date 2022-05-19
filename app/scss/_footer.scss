@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   background: #fff;
-  padding: 140px 0 35px;
+  padding: 90px 0 35px;
 }
 
 .footer-top {
@@ -200,6 +200,7 @@
     display: inline-block;
     position: relative;
     padding-right: 30px;
+
     &::before {
       width: 24px;
       height: 24px;
@@ -346,6 +347,7 @@
     left: 250px;
   }
 }
+
 @media screen and (max-width: 730px) {
   .company-info {
     .dot {
@@ -359,6 +361,7 @@
     margin-bottom: 26px;
   }
 }
+
 @media screen and (max-width: 650px) {
   .footer-bottom {
     position: relative;
@@ -412,6 +415,7 @@
     .dot {
       font-size: 22px;
       line-height: 1.1;
+
       &::before {
         width: 16px;
         height: 16px;
